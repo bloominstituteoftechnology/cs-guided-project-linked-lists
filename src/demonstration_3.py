@@ -1,5 +1,5 @@
 """
-Given a non-empty, singly linked list with a reference to the head node, return a middle node of linked list. If there are two middle nodes, return the second middle node.
+Given a non-empty, singly-linked list with a reference to the head node, return a middle node of the linked list. If there are two middle nodes, return the second middle node.
 
 Example 1:
 
