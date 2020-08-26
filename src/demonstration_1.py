@@ -3,7 +3,7 @@ Given only a reference to a specific node in a linked list, delete that node fro
 
 Example:
 
-The code below should first a linked list (x -> y -> z) and then delete `y` from the linked list by calling the function `delete_node`. It is your job to write the `delete_node` function.
+The code below should first construct a linked list (x -> y -> z) and then delete `y` from the linked list by calling the function `delete_node`. It is your job to write the `delete_node` function.
 
 ```python
 class LinkedListNode():
