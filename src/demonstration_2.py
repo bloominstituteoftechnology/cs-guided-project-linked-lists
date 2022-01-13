@@ -33,16 +33,19 @@ def reverse(head_of_list):
         return head_of_list
     
     # pointers to keep track of
+    # where we are
     current_node = head_of_list
+    # where we came from
     previous_node = None
+    # because of the overwriting, we need to store this to keep the while loop going
     next_node = None
 
     # all three pointers need to by shifted over one at a time in order to change the whole list
     # move previous_node first, current_node second, and next_node last to keep the links we need to traverse the whole list
-    while current_node:
+    while current_node: # run the loop as long as we haven't gotten to the end of the list
         # cache the next node before resetting the next property on current node to point backwards
         next_node = current_node.next
-        # point our current_node to the previous_node (backwards)
+        # point our current_node to the previous_node (backwards), "flip the arrow"
         current_node.next = previous_node
         # shuffle previous_node to current_node for the next round
         previous_node = current_node

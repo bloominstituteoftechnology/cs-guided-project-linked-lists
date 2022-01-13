@@ -28,8 +28,31 @@ class LinkedListNode():
         self.value = value
         self.next  = None
 
-def delete_node(delete_this_node):
-    # Your code here
+# helper for testing: pass in the first node (head) and all the elements should be printed
+def print_list(head: LinkedListNode):
+    current_node = head
+    while current_node:
+        print(current_node.value)
+        current_node = current_node.next #traverse to the next node until current_node.next = None
+    print("End of List")
+
+# Plan:
+# can only look forward for a given node
+# change the previous node's next pointer to "skip over" the given node as a way of deleting it
+# with we can't look back, can't access previous node in without traversing n times
+# Can achieve the same effect by assigning the given node the value of the next node and also its pointer(next property)
+# this will skip turn the given node into given_node.next and skip over the next node
+
+def delete_node(node):
+    # edge case: check if next is undefined before proceeding, can't access None.next
+    next = node.next
+    if next:
+        node.value = next.value
+        node.next = next.next
+    else:
+        print("Error: node argument is the last element of list")
+        node = None
+    
 
 
 x = LinkedListNode('X')
@@ -38,5 +61,14 @@ z = LinkedListNode('Z')
 
 x.next = y
 y.next = z
+# list created X -> Y -> Z
 
-delete_node(y)
+print_list(x)
+
+delete_node(y) # X -> Z
+
+print_list(x)
+
+# edge case: delete from end of the list
+delete_node(z)
+print_list(x)
