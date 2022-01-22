@@ -33,13 +33,13 @@ def insert_into_sorted_list(l, value):
             # set start_node to new_node
             return new_node
         # current_node.next.value is None
-        if current_node.next is None:
+        elif current_node.next is None:
             # point current_node.next to new_node
             current_node.next = new_node
             # return out
             return l
         # if current_node.next.value is greater than value
-        if current_node.next.value > value:
+        elif current_node.next.value > value:
             # save current_node.next
             node_after_insert = current_node.next
             # link current_node to new_node with value arg
