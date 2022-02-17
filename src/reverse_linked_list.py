@@ -13,7 +13,6 @@ once.
 running your function by hand. Does it actually work? Also, don't forget to
 consider edge cases (like a list with only 1 or 0 elements).*
 """
-# testing...
 # example list 1->2->3->4->5 turns into 5->4->3->2->1
 # input is the head node, in example that would be 1
 # O(1) space, can't make new list
